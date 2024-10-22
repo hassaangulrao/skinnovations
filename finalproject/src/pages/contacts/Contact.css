@@ -1,0 +1,166 @@
+.main-div {
+    background-color: #1a0418;
+}
+
+/* Container for the entire form */
+.Contact-Content {
+    background-color: #1a0418;
+    text-align: center; 
+    padding: 30px 0px; 
+    transition: background-color 4s ease, transform 4s ease, opacity 3s ease; 
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateX(-160px); /* Start with a slight translation to the left */
+}
+
+/* Add a class to trigger the transition */
+.Contact-Content.visible {
+    opacity: 1; 
+    transform: translateX(0); /* Move to original position */
+}
+
+.next-project{
+    color: #b3da16;
+}
+
+/*Form Styling */
+.elementor-widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #a58bcc;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Form Wrapper */
+.mf-form-wrapper {
+    background-color: #1a0418;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Label Styling */
+.mf-input-label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+.mf-input,
+.mf-textarea {
+    background-color: #463444;
+    color: #b1b1b1;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 15px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.mf-input::placeholder,
+.mf-textarea::placeholder {
+    color: #6c6c6c;
+}
+
+.mf-input:focus,
+.mf-textarea:focus {
+    outline: none;
+    background-color: #3a3a3a;
+}
+
+/* Textarea Specific Styling */
+.mf-textarea {
+    resize: none;
+}
+
+/* Required Indicator */
+.mf-input-required-indicator {
+    color: #c9f31d;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Flexbox for Input Row */
+.e-con {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.e-child {
+    flex: 1 1 calc(50% - 20px); /* Each input takes half the width minus the gap */
+}
+
+/* Button Styling */
+.metform-btn {
+    background-color: #d6a5e4; /* Light purple */
+    color: #1f1f1f;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.metform-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #a067b5; /* Dark purple */
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.metform-btn:hover::before {
+    left: 0;
+}
+
+.metform-btn:hover {
+    color: #fff;
+}
+
+.metform-btn i {
+    margin-left: 10px;
+    color: #1f1f1f;
+    position: relative;
+    z-index: 1;
+}
+
+.metform-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .e-child {
+        flex: 1 1 100%; /* Stack inputs vertically on small screens */
+    }
+
+    .mf-form-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+}

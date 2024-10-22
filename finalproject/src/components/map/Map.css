@@ -1,0 +1,9 @@
+.map-container{
+   
+    height: 70%;
+    width: 70%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+    touch-action: pan-x pan-y;
+}

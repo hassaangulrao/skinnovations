@@ -1,0 +1,72 @@
+.testimonial-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.testimonial-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative; 
+  overflow: hidden;
+}
+.second-card{
+  margin-top: 20px;
+}
+/* Carousel Animation for the First Card (Right to Left) */
+.first-card .carousel {
+  display: flex;
+  animation: scroll-right-to-left 15s linear infinite;
+}
+
+.second-card .carousel {
+  display: flex;
+  animation: scroll-left-to-right 15s linear infinite;
+}
+
+/* Right to Left Animation for the First Card */
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+/* Left to Right Animation for the Second Card */
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%); 
+  }
+}
+
+/* Carousel container adjustments to ensure seamless transition */
+.carousel {
+  display: flex;
+  justify-content: flex-start;
+  width: 200%; 
+}
+
+.card-rev {
+  flex-shrink: 0;
+  width: 25%; 
+  margin: 0 10px;
+}
+.head-text{
+  font-family: sans-serif;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

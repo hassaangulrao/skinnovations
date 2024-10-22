@@ -1,0 +1,130 @@
+/* Main section */
+.main-sec {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When in view */
+.pricing-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: #1e1e1e; /* Dark background like the second image */
+    border: 1px solid #303c5a;
+    color: #fff; /* White text */
+    padding: 40px; /* Increased padding for better spacing */
+    width: 320px; /* Slightly wider cards */
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 1s ease, opacity 1s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* When in view */
+.pricing-section.in-view .pricing-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+.popular-badge{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+/* Popular card style */
+.popular-card {
+    background-color: #292929; /* Slightly lighter shade */
+    border: 2px solid #7f29a7;
+    box-shadow: 10 14px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+/* Card title and description */
+.card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.card-description {
+    font-size: 16px; /* Slightly larger description font */
+    margin-bottom: 20px;
+    color: #cfcfcf; /* Lighter gray text */
+    text-align: left; /* Align text to the left */
+}
+
+/* Features list */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    text-align: left; /* Align text to the left */
+    color: #bfbfbf; /* Slightly lighter text */
+}
+
+/* Pricing */
+.pricing {
+    margin-bottom: 20px;
+    text-align: left; /* Align the pricing text to the left */
+}
+
+/* Price styling */
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff; /* Bright green price */
+    text-align: left; /* Align price to the left */
+}
+
+/* Button styling */
+.get-started {
+    background-color: #1a0418; /* Darker background */
+    color: white;
+    border: 1px solid #555; /* Light border */
+    padding: 12px 25px; /* Larger padding */
+    border-radius: 25px;
+    font-size: 16px; /* Larger font size */
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.get-started:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: #6f0599; /* Green button hover effect */
+    color: black; /* Black text on hover */
+}

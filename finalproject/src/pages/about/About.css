@@ -1,0 +1,380 @@
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #1a0418; /* Background color added */
+    margin-top: 40px;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background-image: url("");
+    background-size: cover;
+    border-radius: 20px;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -1;
+    transition: background 2s, border-radius 2s, opacity 2s;
+    animation: slideIn 1.5s forwards;
+}
+
+.background-image h1 {
+    font-size: 60px;
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.background-image p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    animation: slideIn 1.5s forwards;
+    left: -100%;
+    transition: opacity 3s;
+}
+
+/* Animation for the content to slide in */
+@keyframes slideInContent {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.background-image p h1 {
+    animation: slideInContent 1.5s forwards;
+}
+
+/* Styling for the About Us Section */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.about-content.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.AboutUs-Div {
+    width: 50%;
+}
+.AboutUs-Div h1{
+    color: white;
+}
+
+.about-heading {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.about-description {
+    color: white;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.progress-section {
+    width: 40%;
+}
+
+/* Progress Bar Container */
+.progress-bars-container {
+    margin-top: 20px;
+}
+
+/* About Content Slide-Down Animation */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .about-heading {
+        font-size: 30px;
+        margin-left: 80px;
+    }
+
+    .AboutUs-Div h1 {
+        margin-left: 70px;
+    }
+
+    .about-description {
+        font-size: 15px;
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-section {
+        display: none;
+    }
+}
+
+/* Mission Section Animation */
+.mission-section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.mission-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Background image for the mission section */
+.second-div {
+    background: url('') no-repeat center center/cover;
+    background-color: #1a0418; /* Background color added */
+    padding: 80px 0;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-header {
+    margin-bottom: 60px;
+}
+
+.mission-header h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.para {
+    font-size: 18px;
+}
+
+.mission-header h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.mission-details {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.detail-column {
+    width: 45%;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.detail-column h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.detail-column p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Staggered animation for each heading */
+.mission-header h3,
+.mission-header h1,
+.mission-header p,
+.detail-column h2,
+.detail-column p {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Revealing animation with staggered delays */
+.mission-section.revealed .mission-header h3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.mission-section.revealed .mission-header h1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.mission-section.revealed .mission-header p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+
+/* Animation for detail columns */
+.mission-section.revealed .detail-column:nth-child(1) h2,
+.mission-section.revealed .detail-column:nth-child(1) p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.2s;
+}
+
+.mission-section.revealed .detail-column:nth-child(2) h2,
+.mission-section.revealed .detail-column:nth-child(2) p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.5s;
+}
+
+.mission-section.revealed .detail-column:nth-child(3) h2,
+.mission-section.revealed .detail-column:nth-child(3) p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.8s;
+}
+
+.mission-section.revealed .detail-column:nth-child(4) h2,
+.mission-section.revealed .detail-column:nth-child(4) p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 2.1s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mission-header h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .mission-header h3 {
+        text-align: center;
+    }
+
+    .para {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .mission-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* EXPERIENCE SECTION */
+
+.experience-section {
+    background-color: #1a0418; /* Background color added */
+    padding: 80px 0;
+    text-align: center;
+    font-family: 'sans-serif';
+}
+
+.experience-content {
+    margin-bottom: 50px;
+}
+
+.experience-content h5 {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.experience-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.experience-content p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat-item {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.stat-item h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #e6e6e6;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin-bottom: 30px;
+    }
+}

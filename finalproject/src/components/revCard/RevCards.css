@@ -1,0 +1,77 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.card-rev {
+  background-color: #a58bcc;
+  border-radius: 12px;
+  padding: 20px;
+  color: black;
+  width: 300px;
+  margin: 0 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card-rev:hover {
+  transform: translateY(-10px);
+}
+
+.quote-section {
+  margin-bottom: 15px;
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.2rem; /* Ensure larger, more readable text */
+  line-height: 1.5;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.profile-info .name {
+  font-weight: bold;
+  font-size: 1rem; /* Larger font for names */
+}
+
+.profile-info .title {
+  font-size: 0.9rem;
+  color: black;
+  margin-top: -15px;
+  margin-bottom: -10px;
+}
+/* Animation for the carousel */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

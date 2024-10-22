@@ -1,0 +1,209 @@
+body {
+    background-color: #1a0418 !important;
+}
+
+/* Hero section */
+.service-hero-section {
+    position: relative;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQ1JOJIOnfU6H7pvaPvnEboFjpVlwXat9LQ&s");
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Slide content */
+.service-slide-content h1{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.service-slide-content {
+    max-width: 600px;
+    text-align: left;
+    transform: translateY(-20px); /* Initially moved up */
+    opacity: 0; /* Initially hidden */
+    transition: transform 2s ease-out, opacity 2s ease-out; /* Transition for transform and opacity */
+}
+
+/* Show content on page load */
+.service-hero-section.loaded .service-slide-content {
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Fully visible */
+}
+
+/* Call to Action (CTA) button */
+.service-cta-button {
+    background-color: #fcb800;
+    color: #1a1a1a;
+    border-radius: 25px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.service-cta-button:hover {
+    background-color: #99865f;
+}
+
+/* Slide navigation */
+.service-slide-navigation {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Navigation bar */
+.service-nav-bar {
+    width: 70px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Hover effect */
+.service-nav-bar:hover {
+    background-color: #fcb800;
+    transform: scale(1.2);
+}
+
+/* Active state */
+.service-nav-bar.active {
+    background-color: #fcb800;
+}
+
+/* Label styling inside bar */
+.label {
+    font-size: 0.9rem;
+    color: #fff;
+    position: absolute;
+    top: -18px; /* Moves the label up */
+}
+  .web-development-section {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1a0418 !important;
+      text-decoration: underline;
+    }
+    
+    .content p,
+    .bottom-paragraph p {
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+      position: relative;
+    }
+    
+    .planning-strategy {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .planning-strategy .image-1 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+    
+    .planning-strategy .text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1a0418 !important;
+      text-decoration: underline;
+    }
+    
+    .planning-strategy .text ul {
+      list-style-type: none;
+      padding-left: 0;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+    }
+    
+    .planning-strategy .text ul li {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    
+    .planning-strategy .text ul li::before {
+      content: '•';
+      color: #e74c3c;
+      font-weight: bold;
+      display: inline-block;
+      width: 15px;
+      margin-left: -15px;
+    }
+    
+    /* Slide Animations */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    /* Trigger the animations */
+    .hovered .slide-left.active {
+      opacity: 1;
+      animation: slideInLeft 0.6s forwards;
+    }
+    
+    .hovered .slide-right.active {
+      opacity: 1;
+      animation: slideInRight 0.6s forwards;
+    }
+    
+    .bottom-paragraph {
+      margin-top: 30px;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+    }
+    .back-div{
+      background-color: #965aa1;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      padding: 20px 30px;
+      box-shadow: 5px 15px 2cap 2px rgba(255, 255, 255, 0.2);
+
+    }
+  /* SEO SECTION */
+   
